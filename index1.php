@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<?
+include "class.php";
+include "classDB.php";
+?>
 <!--
 This is a starter template page. Use this page to start your new project from
 scratch. This page gets rid of all links and provides the needed markup only.
@@ -64,7 +68,7 @@ desired effect
     <!-- Logo -->
     <a href="starter.php" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>CI</b>Ch</span>
+      <span class="logo-mini"><b>CI</b>CM</span>
       <!-- logo for regular state and mobile devices -->
       <span class="logo-lg"><b>Channel</b>-Mgt</span>
     </a>
@@ -273,6 +277,9 @@ desired effect
             <li><a href="#">Link in level 2</a></li>
           </ul>
         </li>
+        <?
+          include "_view/sidebar.php";
+        ?>
       </ul>
       <!-- /.sidebar-menu -->
     </section>
@@ -286,6 +293,8 @@ desired effect
       <h1>
         Dashboard
         <small>Optional description</small>
+        <a id="test1" href="#" class="testA">booking1</a>
+        <a id="test2" href="#" class="testA">booking2</a>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
@@ -299,7 +308,7 @@ desired effect
       <!-- Your Page Content Here -->
       <div class="row">
       <?
-      //include "./_view/dashboard.php"
+        //include "./_view/dashboard.php"
       ?>
       </div>
 
@@ -479,13 +488,20 @@ desired effect
      user experience. Slimscroll is required when using the
      fixed layout. -->
 <script type="text/javascript">
- $('.ajax-content').load('booking.php');
+ $('.ajax-content').load('booking1.php');
 	// To make Pace works on Ajax calls
 	$(document).ajaxStart(function() { Pace.restart(); });
     $('.ajax').click(function(){
         $.ajax({url: '#', success: function(result){
             $('.ajax-content').load('booking1.php?channel=sms');
         }});
+    });
+
+    $('#test1').click(function(){
+      $('.ajax-content').load('booking.php');
+    });
+    $('#test2').click(function(){
+      $('.ajax-content').load('booking1.php');
     });
 </script>
 

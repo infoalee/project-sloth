@@ -81,7 +81,7 @@
                     
                   </div>
                   <div class="col-sm-2 col-md-2 col-lg-1">
-                    <button class="form-control btn-sm btn-primary">Add</Button>
+                    <button class="form-control btn-sm btn-primary"><i class="fa fa-plus" aria-hidden="true"></i> Add</Button>
                   </div>
                 </div>
 
@@ -151,8 +151,8 @@
 <script type="text/javascript">
     $(function(){
 
-            $(".sms").show();
-            $(".edm").hide();
+            //$(".sms").show();
+            //$(".edm").hide();
 
     });
 </script>

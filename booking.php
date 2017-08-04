@@ -38,9 +38,9 @@
                 <div class="form-group">
                   <label for="inputCampCode" class="col-sm-2 control-label">Campaign code :</label>
 
-                  <div class="col-sm-10 col-lg-6">
+                  <div class="col-sm-10 col-lg-3">
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Campaign Code" id="inputCampCode">
+                            <input type="text" class="form-control" placeholder="Campaign Code" id="inputCampCode" maxlength="9"  required data-validation-required-message="Please enter to Search"  size="9">
                                 <span class="input-group-btn">
                                 <button type="button" class="btn btn-info btn-flat">Check !</button>
                                 </span>
@@ -57,8 +57,9 @@
 
                 <div class="form-group">
                   <label for="inputslProduct" class="col-sm-2 control-label">Product :</label>
-                  <div class="col-sm-10 col-lg-6">
+                  <div class="col-sm-10 col-lg-3">
                     <select id="slProduct" class="form-control selectpicker inline">
+                        <option>Please Select</option>
                         <option value="BA">BA</option>
                         <option value="CC">CC</option>
                         <option value="DF">DF</option>
@@ -97,7 +98,7 @@
                             <input type="text" class="form-control pull-right" id="datepickerFrom" placeholder="From">
                         </div>
                     </div>
-                    -
+                    
                     <div class="col-sm-5 col-lg-3">
                         <div class="input-group date">
                             <div class="input-group-addon">
@@ -111,7 +112,7 @@
 
                 <div class="form-group">
                   <label for="dtContact" class="col-sm-2 control-label">Contact Date :</label>
-                  <div class="col-sm-10 col-lg-6">
+                  <div class="col-sm-10 col-lg-3">
                     <div class="input-group date">
                             <div class="input-group-addon">
                                 <i class="fa fa-calendar"></i>
@@ -123,14 +124,14 @@
 
                 <div class="form-group">
                   <label for="inputAmout" class="col-sm-2 control-label">Amount :</label>
-                  <div class="col-sm-10 col-lg-6">
+                  <div class="col-sm-10 col-lg-3">
                     <input type="text" class="form-control" id="inputAmout" placeholder="Amount">
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label for="slChannel" class="col-sm-2 control-label">Channel :</label>
-                  <div class="col-sm-10 col-lg-6">
+                  <div class="col-sm-10 col-lg-3">
                     <select id="slChannel" class="form-control selectpicker inline">
                         <option>SMS</option>
                         <option>EDM</option>
@@ -141,7 +142,7 @@
 
                 <div class="form-group">
                   <label for="slType" class="col-sm-2 control-label">Type :</label>
-                  <div class="col-sm-10 col-lg-6">
+                  <div class="col-sm-10 col-lg-3">
                     <select id="slType" class="form-control selectpicker inline">
                         <option>Normal (N)</option>
                         <option>Personalize (P)</option>

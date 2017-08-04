@@ -1,7 +1,5 @@
-
-
 <?
-include("class.php");
+//include("classDB.php");
 $dashboard = new Dashboard;
 //**** New class database ****//
 $strHost = "127.0.0.1";
@@ -14,7 +12,7 @@ $clsMyDB = new MySQLDB($strHost,$strDB,$strUser,$strPassword);
 if(isset($_SESSION["ROLE"])){
     $_role = $_SESSION["ROLE"];
 }else{
-    $_role = 3;
+    $_role = 1;
 }
 //**** Call to function select record ****//
 $clsMyDB->strTable = "MENU_DASHBOARD";
@@ -48,7 +46,7 @@ Class Dashboard {
     function createMenuItem(){
         $element =  "<div class='col-md-3 col-sm-6 col-xs-12'>
           <div class='info-box'>
-            <span class='info-box-icon " . $this->pnStyle . "'><i class='fa " . $this->icon . "'></i></span>
+            <span class='info-box-icon " . $this->pnStyle . "'><i class='" . $this->icon . "'></i></span>
 
             <div class='info-box-content'>
               <span class='info-box-text'>" . $this->label . "</span>
