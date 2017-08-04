@@ -36,57 +36,55 @@
             <form class="form-horizontal">
               <div class="box-body">
                 <div class="form-group">
-                  <label for="inputCampCode" class="col-sm-2 control-label">Campaign code :</label>
+                  <label for="lbCampaignCode" class="col-sm-2 control-label">Campaign code :</label>
 
                   <div class="col-sm-10 col-lg-6">
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Campaign Code" id="inputCampCode">
-                                <span class="input-group-btn">
-                                <button type="button" class="btn btn-info btn-flat">Check !</button>
-                                </span>
+                       $campaignCode
                         </div>
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="inputCampName" class="col-sm-2 control-label">Campaign Name :</label>
+                  <label for="lbCampaingName" class="col-sm-2 control-label">Campaign Name :</label>
                   <div class="col-sm-10 col-lg-6">
-                    <input type="password" class="form-control" id="inputCampName" placeholder="Campaign Name">
+                     $campaignName
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="inputslProduct" class="col-sm-2 control-label">Product :</label>
+                  <label for="lbContactDate" class="col-sm-2 control-label">Contact Date :</label>
 
+                  <div class="col-sm-5 col-lg-2">
+                    $contactDate
+                  </div>
+                  <label for="lbAmount" class="col-sm-2 control-label">Amount :</label>
+                  <div class="col-sm-5 col-lg-2">
+                    $amount
+                  </div>
+                  
+                </div>
+
+                <div class="form-group">
+                  <label for="imputSMSMeassage1" class="col-sm-2 control-label">SMS Message :</label>
                   <div class="col-sm-10 col-lg-6">
-                    <select id="slProduct" class="form-control selectpicker inline">
-                        <option value="BA">BA</option>
-                        <option value="CC">CC</option>
-                        <option value="DF">DF</option>
-                        <option value="MF">MF</option>
-                        <option value="PL">PL</option>
-                        <option value="KEC">KEC</option>
-                        <option>Other..</option>
-                    </select>
+                    <textarea row="3" class="form-control" id="imputSMSMeassage1" placeholder="SMS Message 1"></textarea>
+                    
+                  </div>
+                  <div class="col-sm-2 col-lg-1">
+                    <button class="form-control btn-sm btn-primary">Add</Button>
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="inputObjective" class="col-sm-2 control-label">Objective :</label>
+                  <label for="inputBudgetOwn" class="col-sm-2 control-label">Contact Date :</label>
+
                   <div class="col-sm-10 col-lg-6">
-                    <input type="text" class="form-control" id="inputObjective" placeholder="Objective">
+                    <input type="text" class="form-control" id="inputBudgetOwn" placeholder="Budget Owner">
                   </div>
+                  
                 </div>
 
-                <div class="form-group">
-                  <label for="inputCustGrp" class="col-sm-2 control-label">Customer Group :</label>
-                  <div class="col-sm-10 col-lg-6">
-                    <textarea row="3" class="form-control" id="inputCustGrp" placeholder="Customer Group"></textarea>
-
-                  </div>
-                </div>
-
-                
 
                 <div class="form-group">
                   <div class="col-sm-offset-2 col-sm-10">

@@ -555,7 +555,7 @@ desired effect
 	$(document).ajaxStart(function() { Pace.restart(); });
     $('.ajax').click(function(){
         $.ajax({url: '#', success: function(result){
-            $('.ajax-content').load('booking1.php');
+            $('.ajax-content').load('booking.php');
         }});
     });
 </script>
