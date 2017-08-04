@@ -57,7 +57,6 @@
 
                 <div class="form-group">
                   <label for="inputslProduct" class="col-sm-2 control-label">Product :</label>
-
                   <div class="col-sm-10 col-lg-6">
                     <select id="slProduct" class="form-control selectpicker inline">
                         <option value="BA">BA</option>
