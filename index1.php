@@ -550,7 +550,7 @@ desired effect
      user experience. Slimscroll is required when using the
      fixed layout. -->
 <script type="text/javascript">
- $('.ajax-content').load('booking1.php');
+ $('.ajax-content').load('booking.php');
 	// To make Pace works on Ajax calls
 	$(document).ajaxStart(function() { Pace.restart(); });
     $('.ajax').click(function(){
