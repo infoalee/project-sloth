@@ -75,15 +75,23 @@
                 </div>
 
                 <div class="form-group sms">
-                  <label for="imputSMSMeassage1" class="col-sm-2 control-label">SMS Message :</label>
-                  <div class="col-sm-8 col-md-6 col-lg-6">
-                    <textarea row="3" class="form-control" id="imputSMSMeassage1" placeholder="SMS Message 1"></textarea>
+                  <label for="inputSMSMeassage1" class="col-sm-2 control-label">SMS Message :</label>
+                  <div class="col-sm-8 col-md-6 col-lg-6 SMSMSG">
+                    <textarea row="3" class="form-control" id="inputSMSMeassage1" placeholder="SMS Message 1"></textarea>
                     
                   </div>
                   <div class="col-sm-2 col-md-2 col-lg-1">
-                    <button class="form-control btn-sm btn-primary"><i class="fa fa-plus" aria-hidden="true"></i> Add</Button>
+                    <button id='btnAddSMS' class="form-control btn-sm btn-primary"><i class="fa fa-plus" aria-hidden="true"></i> Add</Button>
                   </div>
                 </div>
+                <script>
+                    $(function (){
+                        $("#btnAddSMS").click(function(){
+                            alert($(".SMSMSG").size());
+                            $(".SMSMSG").append("<textarea row='3' class='form-control' id='nputSMSMeassage1' placeholder='SMS Message 2'></textarea>")
+                        });
+                    });
+                </script>
 
                 <div class="form-group sms">
                   <label for="inputBudgetOwn" class="col-sm-2 control-label">Budget Owner :</label>

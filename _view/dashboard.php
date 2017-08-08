@@ -54,7 +54,7 @@ Class Dashboard {
                 <span class='info-box-btn' style='position: absolute;
 bottom: 15px;
 right: 15px;left: 105px;'>
-               <button type='button' class='btn btn-block btn-xs btn-info btn-flat'>". $this->detail ."</button>
+               <button type='button' class='btn btn-block btn-sm btn-flat bg-teal'>". $this->detail ." >> </button>
                </span>
             </div>
 
