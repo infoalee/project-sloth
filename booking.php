@@ -42,7 +42,7 @@
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Campaign Code" id="inputCampCode" maxlength="9"  required data-validation-required-message="Please enter to Search"  size="9">
                                 <span class="input-group-btn">
-                                <button type="button" class="btn btn-info btn-flat">Check !</button>
+                                <button type="button" id="btnCampaingChk" class="btn btn-info btn-flat">Check !</button>
                                 </span>
                         </div>
                   </div>
@@ -58,7 +58,7 @@
                 <div class="form-group">
                   <label for="inputslProduct" class="col-sm-2 control-label">Product :</label>
                   <div class="col-sm-10 col-lg-3">
-                    <select id="slProduct" class="form-control selectpicker inline">
+                    <select id="inputslProduct" class="form-control selectpicker inline">
                         <option>Please Select</option>
                         <option value="BA">BA</option>
                         <option value="CC">CC</option>
