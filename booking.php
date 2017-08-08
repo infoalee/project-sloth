@@ -177,4 +177,4 @@
           </div>
           <!-- /.box -->
           <script src="./_controller/booking.js" />
-          <script src="./_controller/func.js" />
+          <script src="./_controller/page_function.js" />
