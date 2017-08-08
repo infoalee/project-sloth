@@ -44,7 +44,7 @@ $objSelect = $clsMyDB->fncReturnResult();
 Class Sidebar {
 
     function createMenuItem(){
-        $element =  "<li><a href='#'><i class='" . $this->icon . "'></i> <span>" . $this->label . "</span></a></li>";
+        $element =  "<li><a href='" . $this->href . "'><i class='" . $this->icon . "'></i> <span>" . $this->label . "</span></a></li>";
                 return $element;
     }
 }
