@@ -51,7 +51,7 @@
                 <div class="form-group">
                   <label for="inputCampName" class="col-sm-2 control-label">Campaign Name :</label>
                   <div class="col-sm-10 col-lg-6">
-                    <input type="password" class="form-control" id="inputCampName" placeholder="Campaign Name">
+                    <input type="text" class="form-control" id="inputCampName" placeholder="Campaign Name">
                   </div>
                 </div>
 

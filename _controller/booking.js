@@ -29,7 +29,7 @@ $(document).ready(function () {
                         var result = data.split("|");
                         var name = trimStr(result[0]);
                         var objective = result[1];
-                        //var product = trimStr(result[2].toUpperCase());
+                        var product = trimStr(result[2]);
                         var startDate = result[3];
                         var endDate = result[4];
                         var campType = result[5];
