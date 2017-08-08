@@ -176,3 +176,4 @@
             </form>
           </div>
           <!-- /.box -->
+          <script src="./_controller/booking.js" />
