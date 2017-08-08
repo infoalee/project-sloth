@@ -81,16 +81,60 @@
                     
                   </div>
                   <div class="col-sm-2 col-md-2 col-lg-1">
-                    <button id='btnAddSMS' class="form-control btn-sm btn-primary"><i class="fa fa-plus" aria-hidden="true"></i> Add</Button>
+                    <button id='btnAddSMS' class="form-control btn-sm btn-success"><i class="fa fa-plus" aria-hidden="true"></i> Add</Button>
+                    <button id='btnDelSMS' class="form-control btn-sm btn-warning"><i class="fa fa-minus" aria-hidden="true"></i> Del</Button>
                   </div>
                 </div>
                 <script>
-                    $(function (){
+/*                     $(function (){
                         $("#btnAddSMS").click(function(){
                             alert($(".SMSMSG").size());
                             $(".SMSMSG").append("<textarea row='3' class='form-control' id='nputSMSMeassage1' placeholder='SMS Message 2'></textarea>")
                         });
                     });
+ */
+
+                        
+
+                   var n = $( "textarea" ).length;
+                    if (n > 1){
+                        $("#btnDelSMS").show();
+                    }else{
+                        $("#btnDelSMS").hide();
+                    }
+
+                    $("#btnAddSMS")
+                    .click(function() {
+                        var n = $( "textarea" ).length + 1;
+                        if (n > 1 ){
+                            $("#btnDelSMS").show();
+                        }
+                        if (n < 10 ){
+                            $(".SMSMSG").append( $( "<textarea row='3' class='form-control sms" + n + "' id='inputSMSMeassage1' placeholder='SMS Message " + n + "'></textarea>" ) );
+                        }else{
+                            alert("limit SMS Message")
+                        }
+                        var n = $( "textarea" ).length;
+                        //alert( "There are " + n + " textareas." + "Click to add more.");
+                    });
+                    // Trigger the click to start
+                    //.trigger( "click" );
+
+                    $("#btnDelSMS")
+                    .click(function() {
+                        var n = $( "textarea" ).length;
+                        //if (n < 10 ){
+                            //alert($('textarea').length);
+                            $('textarea').remove( ".sms" + n);
+                        //}else{
+                        //    alert("limit SMS Message")
+                       // }
+                        if ($( "textarea" ).length < 2){
+                            $(this).hide();
+                        }
+                        //alert( "There are " + n + " textareas." + "Click to add more.");
+                    });
+
                 </script>
 
                 <div class="form-group sms">
