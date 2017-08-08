@@ -18,6 +18,8 @@
   <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
   <!-- iCheck -->
   <link rel="stylesheet" href="plugins/iCheck/square/blue.css">
+  <!-- My-Style-->
+  <link rel="stylesheet" href="dist/css/my-style.css">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -27,6 +29,9 @@
   <![endif]-->
 </head>
 <body class="hold-transition login-page">
+
+    <div class="modal-loading"><i class="fa fa-spinner fa-spin modal-loading-center text-green" style="font-size:70px"></i></div>
+
 <div class="login-box">
   <div class="login-logo">
     <img src="images/kasikorn_logo.png" class="user-image" alt="KBank Image" width="70px" height="70px"><br>
@@ -100,6 +105,5 @@
 	
 <script src="./_controller/login.js"></script>
 <script src="./_controller/page_function.js"></script>    
-
 </body>
 </html>
