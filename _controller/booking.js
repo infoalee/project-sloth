@@ -11,7 +11,7 @@ $(document).ready(function () {
             //$('.modal-loading').show();
             var id_search = $("#inputCampCode").val();
             $.ajax({
-                url: "./_model/func-newtask.php",
+                url: "./_model/func-booking.php",
                 type: "POST",
                 data: { key_search: id_search },
                 //dataType: "json",
