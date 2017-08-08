@@ -50,11 +50,16 @@ Class Dashboard {
 
             <div class='info-box-content'>
               <span class='info-box-text'>" . $this->label . "</span>
-              <span class='info-box-number text-center'><h3>". $this->notification ."</h3></span>
+              <span class='info-box-number text-center'>". $this->notification ."</span>
+                <span class='info-box-btn' style='position: absolute;
+bottom: 15px;
+right: 15px;left: 105px;'>
+               <button type='button' class='btn btn-block btn-xs btn-info btn-flat'>". $this->detail ."</button>
+               </span>
             </div>
 
             <div class='info-box-footer'>
-                <button type='button' class='btn btn-block btn-sm btn-info'>". $this->detail ."</button>
+               
             </div>
 
             <!-- /.info-box-content -->
