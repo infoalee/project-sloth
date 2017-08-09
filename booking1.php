@@ -180,20 +180,11 @@
                   </div>
                 </div>
 
-                <div class="form-group">
-                  <div class="col-sm-offset-2 col-sm-10">
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox"> Remember me
-                      </label>
-                    </div>
-                  </div>
-                </div>
               </div>
               <!-- /.box-body -->
-              <div class="box-footer col-centered">
-                <button type="submit" class="btn btn-default">Cancel</button>
-                <button type="submit" class="btn btn-info">Booking</button>
+              <div class="box-footer col-centered text-center">
+                <button type="cancel" class="btn btn-warning"><i class='fa fa-arrow-circle-left'></i> Back</button>
+                <button type="submit" class="btn btn-success"><i class='X glyphicon glyphicon-book'></i> Booking</button>
               </div>
               <!-- /.box-footer -->
             </form>

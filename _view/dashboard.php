@@ -12,7 +12,7 @@ $clsMyDB = new MySQLDB($strHost,$strDB,$strUser,$strPassword);
 if(isset($_SESSION["ROLE"])){
     $_role = $_SESSION["ROLE"];
 }else{
-    $_role = 1;
+    $_role = 3;
 }
 //**** Call to function select record ****//
 $clsMyDB->strTable = "MENU_DASHBOARD";
@@ -44,7 +44,7 @@ $objSelect = $clsMyDB->fncReturnResult();
 Class Dashboard {
 
     function createMenuItem(){
-        $element =  "<div class='col-md-3 col-sm-6 col-xs-12'>
+        $element =  "<div class='col-md-3 col-sm-6 col-xs-13'>
           <div class='info-box'>
             <span class='info-box-icon " . $this->pnStyle . "'><i class='" . $this->icon . "'></i></span>
 

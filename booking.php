@@ -36,7 +36,7 @@
             <form class="form-horizontal">
               <div class="box-body">
                 <div class="form-group">
-                  <label for="inputCampCode" class="col-sm-3 control-label">Campaign code :</label>
+                  <label for="inputCampCode" class="col-sm-2 control-label">Campaign code :</label>
 
                   <div class="col-sm-10 col-lg-3">
                         <div class="input-group">
@@ -49,14 +49,14 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="inputCampName" class="col-sm-3 control-label">Campaign Name :</label>
+                  <label for="inputCampName" class="col-sm-2 control-label">Campaign Name :</label>
                   <div class="col-sm-10 col-lg-6">
                     <input type="text" class="form-control" id="inputCampName" placeholder="Campaign Name">
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="inputslProduct" class="col-sm-3 control-label">Product :</label>
+                  <label for="inputslProduct" class="col-sm-2 control-label">Product :</label>
                   <div class="col-sm-10 col-lg-3">
                     <select id="inputslProduct" class="form-control selectpicker inline">
                         <option>Please Select</option>
@@ -72,14 +72,14 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="inputObjective" class="col-sm-3 control-label">Objective :</label>
+                  <label for="inputObjective" class="col-sm-2 control-label">Objective :</label>
                   <div class="col-sm-10 col-lg-6">
                     <input type="text" class="form-control" id="inputObjective" placeholder="Objective">
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="inputCustGrp" class="col-sm-3 control-label">Customer Group :</label>
+                  <label for="inputCustGrp" class="col-sm-2 control-label">Customer Group :</label>
                   <div class="col-sm-10 col-lg-6">
                     <textarea row="3" class="form-control" id="inputCustGrp" placeholder="Customer Group"></textarea>
 
@@ -88,7 +88,7 @@
 
                 <!-- Campaign Period -->
                 <div class="form-group">
-                  <label for="dtCampaingPeriod" class="col-sm-3 control-label">Campaign Periods :</label>
+                  <label for="dtCampaingPeriod" class="col-sm-2 control-label">Campaign Periods :</label>
                   <div class="col-sm-5 col-lg-3">
                     
                         <div class="input-group date">
@@ -111,7 +111,7 @@
                 <!-- ./Campaign Period -->
 
                 <div class="form-group">
-                  <label for="dtContact" class="col-sm-3 control-label">Contact Date :</label>
+                  <label for="dtContact" class="col-sm-2 control-label">Contact Date :</label>
                   <div class="col-sm-10 col-lg-3">
                     <div class="input-group date">
                             <div class="input-group-addon">
@@ -123,14 +123,14 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="inputAmout" class="col-sm-3 control-label">Amount :</label>
+                  <label for="inputAmout" class="col-sm-2 control-label">Amount :</label>
                   <div class="col-sm-10 col-lg-3">
                     <input type="text" class="form-control" id="inputAmout" placeholder="Amount">
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="slChannel" class="col-sm-3 control-label">Channel :</label>
+                  <label for="slChannel" class="col-sm-2 control-label">Channel :</label>
                   <div class="col-sm-10 col-lg-3">
                     <select id="slChannel" class="form-control selectpicker inline">
                         <option>SMS</option>
@@ -141,7 +141,7 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="slType" class="col-sm-3 control-label">Type :</label>
+                  <label for="slType" class="col-sm-2 control-label">Type :</label>
                   <div class="col-sm-10 col-lg-3">
                     <select id="slType" class="form-control selectpicker inline">
                         <option>Normal (N)</option>
@@ -151,26 +151,17 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="inputRemark" class="col-sm-3 control-label">Remarks :</label>
+                  <label for="inputRemark" class="col-sm-2 control-label">Remarks :</label>
                   <div class="col-sm-10 col-lg-6">
                     <textarea row="3" class="form-control" id="inputRemark" placeholder="Remark"></textarea>
                   </div>
                 </div>
 
-                <div class="form-group">
-                  <div class="col-sm-offset-2 col-sm-10">
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox"> Remember me
-                      </label>
-                    </div>
-                  </div>
-                </div>
               </div>
               <!-- /.box-body -->
-              <div class="box-footer col-centered">
-                <button type="submit" class="btn btn-default">Cancel</button>
-                <button type="submit" class="btn btn-info">Booking</button>
+              <div class="box-footer col-centered text-center">
+                <button type="submit" class="btn btn-warning">Cancel</button>
+                <button type="submit" class="btn btn-info">Next <i class='fa fa-arrow-circle-right'></i></button>
               </div>
               <!-- /.box-footer -->
             </form>

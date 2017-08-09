@@ -59,7 +59,7 @@ desired effect
 |               | sidebar-mini                            |
 |---------------------------------------------------------|
 -->
-<body class="hold-transition skin-green sidebar-mini">
+<body class="hold-transition skin-green sidebar-mini sidebar-collapse">
 <div class="wrapper">
 
   <!-- Main Header -->
@@ -335,37 +335,37 @@ desired effect
             <div class="box-body table-responsive no-padding">
               <table class="table table-hover">
                 <tr>
-                  <th>ID</th>
-                  <th>User</th>
-                  <th>Date</th>
+                  <th>Ref No.</th>
+                  <th>Campaign Code</th>
+                  <th>Campaign Name</th>
                   <th>Status</th>
                   <th>Reason</th>
                 </tr>
                 <tr>
-                  <td>183</td>
-                  <td>John Doe</td>
-                  <td>11-7-2014</td>
+                  <td>1-1</td>
+                  <td>FCCS17604</td>
+                  <td>X_Sell_TopUp_High_sms_edm_Jan2017</td>
                   <td><span class="label label-success">Approved</span></td>
                   <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
                 </tr>
                 <tr>
-                  <td>219</td>
-                  <td>Alexander Pierce</td>
-                  <td>11-7-2014</td>
+                  <td>1-2</td>
+                  <td>CDFS17363</td>
+                  <td>Upsell CC Payroll Bonus 2017</td>
                   <td><span class="label label-warning">Pending</span></td>
                   <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
                 </tr>
                 <tr>
-                  <td>657</td>
-                  <td>Bob Doe</td>
-                  <td>11-7-2014</td>
+                  <td>1-3</td>
+                  <td>CCCS17301</td>
+                  <td>Upsell CC IP Wealth Growth Trigger 2017 Phase 1</td>
                   <td><span class="label label-primary">Approved</span></td>
                   <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
                 </tr>
                 <tr>
-                  <td>175</td>
-                  <td>Mike Doe</td>
-                  <td>11-7-2014</td>
+                  <td>2-1</td>
+                  <td>CCCS16297</td>
+                  <td>EDM_Informative_Reward_Point_Flyer_Bonus</span></td>
                   <td><span class="label label-danger">Denied</span></td>
                   <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
                 </tr>
@@ -488,12 +488,12 @@ desired effect
      user experience. Slimscroll is required when using the
      fixed layout. -->
 <script type="text/javascript">
- $('.ajax-content').load('booking1.php');
+ $('.ajax-content').load('booking.php');
 	// To make Pace works on Ajax calls
 	$(document).ajaxStart(function() { Pace.restart(); });
     $('.ajax').click(function(){
         $.ajax({url: '#', success: function(result){
-            $('.ajax-content').load('booking1.php?channel=sms');
+            $('.ajax-content').load('booking.php?channel=sms');
         }});
     });
 
