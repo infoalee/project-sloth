@@ -308,7 +308,7 @@ desired effect
       <!-- Your Page Content Here -->
       <div class="row">
       <?
-        include "./_view/dashboard.php"
+        //include "./_view/dashboard.php"
       ?>
       </div>
 
