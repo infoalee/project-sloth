@@ -1,5 +1,5 @@
 <?
-require_once("../class.php"); 
+require_once("../classDB.php"); 
 setlocale(LC_MONETARY, 'th_TH');
 
 $db = new ODBC(); 
