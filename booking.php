@@ -24,6 +24,9 @@
             todayHighlight: true
             });
             
+            $('#btnNext').click(function(){
+                $('.ajax-content').load('booking1.php');
+            });
           });
     </script>
 <!-- Horizontal Form -->
@@ -60,12 +63,7 @@
                   <div class="col-sm-10 col-lg-3">
                     <select id="inputslProduct" class="form-control selectpicker inline">
                         <option>Please Select</option>
-                        <option value="BA">BA</option>
-                        <option value="CC">CC</option>
-                        <option value="DF">DF</option>
-                        <option value="MF">MF</option>
-                        <option value="PL">PL</option>
-                        <option value="KEC">KEC</option>
+                        <? include "_view/product.php" ?>
                         <option>Other..</option>
                     </select>
                   </div>
@@ -160,8 +158,8 @@
               </div>
               <!-- /.box-body -->
               <div class="box-footer col-centered text-center">
-                <button type="submit" class="btn btn-warning">Cancel</button>
-                <button type="submit" class="btn btn-info">Next <i class='fa fa-arrow-circle-right'></i></button>
+                <button type="cancel" class="btn btn-warning">Cancel</button>
+                <button type="submit" class="btn btn-info" id="btnNext">Next <i class='fa fa-arrow-circle-right'></i></button>
               </div>
               <!-- /.box-footer -->
             </form>
