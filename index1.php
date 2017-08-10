@@ -1,3 +1,6 @@
+<?
+session_start();
+?>
 <!DOCTYPE html>
 <?
 include "class.php";
@@ -184,7 +187,7 @@ desired effect
               <!-- The user image in the navbar-->
               <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
               <!-- hidden-xs hides the username on small devices so only the image appears. -->
-              <span class="hidden-xs">$user</span>
+              <span class="hidden-xs"><? echo $_SESSION["LOGIN_ID"]; ?></span>
             </a>
             <ul class="dropdown-menu">
               <!-- The user image in the menu -->
@@ -192,7 +195,8 @@ desired effect
                 <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                 <p>
-                  $userFullName - $position
+                  <? echo $_SESSION["LOGIN_NAME"] . " - " . $_SESSION["POSITION"] ?>
+                  <!-- $userFullName - $position-->
                   <small>Member since Nov. 2012</small>
                 </p>
               </li>
@@ -217,7 +221,7 @@ desired effect
                   <a href="#" class="btn btn-default btn-flat">Profile</a>
                 </div>
                 <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                  <a href="_model/func-logout.php" class="btn btn-default btn-flat">Sign out</a>
                 </div>
               </li>
             </ul>

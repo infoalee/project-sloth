@@ -103,7 +103,7 @@
 <!-- Contact Form JavaScript -->
 <script src="./dist/js/jqBootstrapValidation.js"></script>
 	
-<script src="./_controller/login.js"></script>
+<script src="./_controller/test-login.js"></script>
 <script src="./_controller/page_function.js"></script>    
 </body>
 </html>

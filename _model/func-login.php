@@ -55,6 +55,7 @@ $check_err="";//ตรวจสอบการ Error
 																			$tostrUpper = ucwords(strtoupper($username));  
 																			$tostrFUpper = ucwords(strtolower($tostrUpper)); 
 																			$_SESSION["LOGIN_NAME"]  = $tostrFUpper;
+																			$_SESSION["POSITION"]  = $tostrFUpper;
 																			//$_SESSION["home"]  = 'index2.php?bp=1';
 
 																			//extract($_SESSION);
