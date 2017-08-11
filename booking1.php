@@ -36,7 +36,7 @@
             <form class="form-horizontal">
               <div class="box-body">
                 <div class="form-group">
-                  <label for="lbCampaignCode" class="col-sm-2 control-label">Campaign code :</label>
+                  <label for="lbCampaignCode" class="col-sm-2 control-label">Campaign code</label>
 
                   <div class="col-sm-10 col-lg-6">
                         <div class="input-group">
@@ -46,45 +46,46 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="lbCampaingName" class="col-sm-2 control-label">Campaign Name :</label>
+                  <label for="lbCampaingName" class="col-sm-2 control-label">Campaign Name</label>
                   <div class="col-sm-10 col-lg-6">
                      $campaignName
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="lbContactDate" class="col-sm-2 control-label">Contact Date :</label>
+                  <label for="lbContactDate" class="col-sm-2 control-label">Contact Date</label>
                   <div class="col-sm-5 col-lg-2">
                     $contactDate
                   </div>
-                  <label for="lbAmount" class="col-sm-2 control-label">Amount :</label>
+                  <label for="lbAmount" class="col-sm-2 control-label">Amount</label>
                   <div class="col-sm-3 col-lg-2">
                     $amount
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="lbChannel" class="col-sm-2 control-label">Channel :</label>
+                  <label for="lbChannel" class="col-sm-2 control-label">Channel</label>
                   <div class="col-sm-5 col-lg-2">
                     $channel
                   </div>
-                  <label for="lbChType" class="col-sm-2 control-label">Type :</label>
+                  <label for="lbChType" class="col-sm-2 control-label">Type</label>
                   <div class="col-sm-3 col-lg-2">
                     $channelType
                   </div>
                 </div>
 
-                <div class="form-group sms">
-                  <label for="inputSMSMeassage1" class="col-sm-2 control-label">SMS Message :</label>
-                  <div class="col-sm-8 col-md-6 col-lg-6 SMSMSG">
-                    <textarea row="3" class="form-control" id="inputSMSMeassage1" placeholder="SMS Message 1"></textarea>
-                    
+                  <div class="form-group sms">
+                      <label for="inputSMSMeassage1" class="col-sm-2 control-label">SMS Message</label>
+                      <div class="col-sm-8 col-md-6 col-lg-6 SMSMSG">
+                        <textarea row="3" class="form-control" id="inputSMSMeassage1" placeholder="SMS Message 1"></textarea>  
+                      </div>
+
+                    <div class="col-sm-2 col-md-2 col-lg-1">
+                      <button id='btnAddSMS' class="form-control btn-sm btn-success"><i class="fa fa-plus" aria-hidden="true"></i> Add</Button>
+                      <button id='btnDelSMS' class="form-control btn-sm btn-warning"><i class="fa fa-minus" aria-hidden="true"></i> Del</Button>
+                    </div>
                   </div>
-                  <div class="col-sm-2 col-md-2 col-lg-1">
-                    <button id='btnAddSMS' class="form-control btn-sm btn-success"><i class="fa fa-plus" aria-hidden="true"></i> Add</Button>
-                    <button id='btnDelSMS' class="form-control btn-sm btn-warning"><i class="fa fa-minus" aria-hidden="true"></i> Del</Button>
-                  </div>
-                </div>
+
                 <script>
 /*                     $(function (){
                         $("#btnAddSMS").click(function(){
@@ -94,9 +95,7 @@
                     });
  */
 
-                        
-
-                   var n = $( "textarea" ).length;
+                   var n = $( ".SMSMSG > textarea" ).length;
                     if (n > 1){
                         $("#btnDelSMS").show();
                     }else{
@@ -105,7 +104,7 @@
 
                     $("#btnAddSMS")
                     .click(function() {
-                        var n = $( "textarea" ).length + 1;
+                        var n = $( ".SMSMSG > textarea" ).length + 1;
                         if (n > 1 ){
                             $("#btnDelSMS").show();
                         }
@@ -114,7 +113,7 @@
                         }else{
                             alert("limit SMS Message")
                         }
-                        var n = $( "textarea" ).length;
+                        var n = $( ".SMSMSG > textarea" ).length;
                         //alert( "There are " + n + " textareas." + "Click to add more.");
                     });
                     // Trigger the click to start
@@ -122,14 +121,14 @@
 
                     $("#btnDelSMS")
                     .click(function() {
-                        var n = $( "textarea" ).length;
+                        var n = $( ".SMSMSG > textarea" ).length;
                         //if (n < 10 ){
                             //alert($('textarea').length);
-                            $('textarea').remove( ".sms" + n);
+                            $('.SMSMSG > textarea').remove( ".sms" + n);
                         //}else{
                         //    alert("limit SMS Message")
                        // }
-                        if ($( "textarea" ).length < 2){
+                        if ($( ".SMSMSG > textarea" ).length < 2){
                             $(this).hide();
                         }
                         //alert( "There are " + n + " textareas." + "Click to add more.");
@@ -138,15 +137,15 @@
                 </script>
 
                 <div class="form-group sms">
-                  <label for="inputBudgetOwn" class="col-sm-2 control-label">Budget Owner :</label>
+                  <label for="inputBudgetOwn" class="col-sm-2 control-label">Budget Owner</label>
                   <div class="col-sm-10 col-lg-6">
                     <input type="text" class="form-control" id="inputBudgetOwn" placeholder="Budget Owner">
                   </div>
                 </div>
 
                 <div class="form-group edm">
-                  <label for="inputslSender" class="col-sm-2 control-label">Sender Name :</label>
-                  <div class="col-sm-10 col-lg-6">
+                  <label for="inputslSender" class="col-sm-2 control-label">Sender Name</label>
+                  <div class="col-sm-10 col-lg-3">
                     <select id="slSender" class="form-control selectpicker inline">
                         <option>Please select</option>
                         <option value="K-Special">K-Special</option>
@@ -157,27 +156,136 @@
                   </div>
                 </div>
 
-
                 <div class="form-group edm">
-                  <label for="inputEdmSubject" class="col-sm-2 control-label">Subject :</label>
+                  <label for="inputEdmSubject" class="col-sm-2 control-label">Subject</label>
                   <div class="col-sm-10 col-lg-6">
                     <input type="text" class="form-control" id="inputEdmSubject" placeholder="Subject">
                   </div>
                 </div>
 
                 <div class="form-group edm">
-                  <label for="inputEdmPathAW" class="col-sm-2 control-label">Paht Artwork :</label>
+                  <label for="inputEdmPathAW" class="col-sm-2 control-label">Paht Artwork</label>
                   <div class="col-sm-10 col-lg-6">
-                    <input type="text" required="required" class="form-control" id="inputEdmPathAW" placeholder="Paht Artwork">
+                    <input type="text" class="form-control" id="inputEdmPathAW" placeholder="Paht Artwork">
                   </div>
                 </div>
 
+                <div class="form-group">
+                  <label for="inputslSender" class="col-sm-2 control-label">Sender (Page Code)</label>
+                  <div class="col-sm-10 col-lg-3">
+                    <select id="slSender" class="form-control selectpicker inline">
+                        <option>Please select</option>
+                        <option value="PA0014">PA0014 - My Promotion</option>
+                        <option value="PA0015">PA0015 - K PLUS</option>
+                        <option value="PA0017">PA0017 - KBank</option>
+                        <option value="PA0003">PA0003 - K-Expert</option>
+                    </select>
+                  </div>
+                </div>
 
                 <div class="form-group">
-                  <label for="fileLeadUpload" class="col-sm-2 control-label">Lead Upload :</label>
-                  <div class="col-sm-6 col-lg-4">
-                   <input type="file" required="required" class="form-control inline" id="fileLeadUpload" />
+                  <label for="inputslSender" class="col-sm-2 control-label">Feed Type</label>
+                  <div class="col-sm-10 col-lg-3">
+                    <select id="slSender" class="form-control selectpicker inline">
+                        <option>Please select</option>
+                        <option value="TA07-1">TA07-1 : Feed แบบ 1 ปุ่ม (สีเขียว)</option>
+                        <option value="TA07-2">TA07-2 : Feed แบบ 2 ปุ่ม (สีเขียวและสีแดง)</option>
+                        <option value="Normal">Normal : Feed แบบ ไม่มีปุ่ม</option>
+                    </select>
                   </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="inputslSender" class="col-sm-2 control-label">URL Action</label>
+                  <div class="col-sm-10 col-lg-3">
+                    <select id="slSender" class="form-control selectpicker inline">
+                        <option>Please select</option>
+                        <option value="1">Register PromptPay</option>
+                        <option value="2">Purchase Mutual Fund</option>
+                        <option value="3">Purchase Travel Insurance</option>
+                        <option value="4">Register Debit Card</option>
+                        <option value="5">Add Credit Card / K-Express Cash</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="inputslSender" class="col-sm-2 control-label">Language</label>
+                  <div class="col-sm-10 col-lg-3">
+                    <select id="slSender" class="form-control selectpicker inline">
+                        <option value="TH">Thai</option>
+                        <option value="TH/EN">Thai / English</option>
+                        <option value="EN">English</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group kpkus">
+                    <label for="inputKPLUSMeassage1" class="col-sm-2 control-label">Message Thai</label>
+                    <div class="col-sm-8 col-md-6 col-lg-6">
+                      <textarea row="3" class="form-control" id="inputKPLUSMeassage1" placeholder="Message Thai 1"></textarea>  
+                    </div>
+
+                  <div class="col-sm-2 col-md-2 col-lg-1">
+                    <button id='btnAddKPLUS' class="form-control btn-sm btn-success"><i class="fa fa-plus" aria-hidden="true"></i> Add</Button>
+                    <button id='btnDelKPLUS' class="form-control btn-sm btn-warning"><i class="fa fa-minus" aria-hidden="true"></i> Del</Button>
+                  </div>
+                </div>
+
+                <div class="form-group kpkus">
+                  <label for="inputEdmPathAW" class="col-sm-2 control-label">Alert Thai</label>
+                  <div class="col-sm-10 col-lg-6">
+                    <input type="text" class="form-control" id="inputEdmPathAW" placeholder="Alert Thai 1">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="fileLeadUpload" class="col-sm-2 control-label">Image Thai</label>
+                  <div class="col-sm-6 col-lg-4">
+                   <input type="file" class="form-control inline" id="fileLeadUpload" />
+                  </div>
+                </div>
+
+                <div class="form-group kpkus">
+                    <label for="inputKPLUSMeassage1" class="col-sm-2 control-label">Message English</label>
+                    <div class="col-sm-8 col-md-6 col-lg-6">
+                      <textarea row="3" class="form-control" id="inputKPLUSMeassage1" placeholder="Message English 1"></textarea>  
+                    </div>
+                </div>
+
+                <div class="form-group kpkus">
+                  <label for="inputEdmPathAW" class="col-sm-2 control-label">Alert English</label>
+                  <div class="col-sm-10 col-lg-6">
+                    <input type="text" class="form-control" id="inputEdmPathAW" placeholder="Alert English 1">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="fileLeadUpload" class="col-sm-2 control-label">Image English</label>
+                  <div class="col-sm-6 col-lg-4">
+                   <input type="file" class="form-control inline" id="fileLeadUpload" />
+                  </div>
+                </div>
+      
+                <div class="form-group">
+                  <label for="fileLeadUpload" class="col-sm-2 control-label">Mobile To Test</label>
+                  <div class="col-sm-6 col-lg-4">
+                   <input type="file" class="form-control inline" id="fileLeadUpload" />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="fileLeadUpload" class="col-sm-2 control-label">Lead Upload</label>
+                  <div class="col-sm-6 col-lg-4">
+                   <input type="file" class="form-control inline" id="fileLeadUpload" />
+                  </div>
+                </div>
+
+                <div class="form-group kpkus">
+                    <label for="inputKPLUSMeassage1" class="col-sm-2 control-label">Remark</label>
+                    <div class="col-sm-8 col-md-6 col-lg-6">
+                      <textarea row="3" class="form-control" id="inputKPLUSMeassage1" placeholder="Remark"></textarea>  
+                    </div>
                 </div>
 
               </div>

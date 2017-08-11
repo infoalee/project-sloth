@@ -49,7 +49,22 @@
                                 </span>
                         </div>
                   </div>
+
+                        <div class="col-sm-2 col-lg-1">
+                          <label for="inputslType" class="control-label">Type :</label>
+                        </div>
+                        <div class="col-sm-5 col-lg-2">
+                          <select id="inputslType" class="form-control selectpicker">
+                            <option>Targeted</option>
+                            <option>Informative</option>
+                            <option>Informative CRM</option>
+                            <option>Service Campaign</option>
+                            <option>Other</option>
+                          </select>
+                        </div>
+
                 </div>
+
 
                 <div class="form-group">
                   <label for="inputCampName" class="col-sm-2 control-label">Campaign Name :</label>
@@ -167,11 +182,6 @@
           <!-- /.box -->
           <script src="./_controller/booking.js" />
           <script src="./_controller/page_function.js" />
-
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-  Launch demo modal
-</button>
 
 <!-- Modal -->
 <div class="modal fade modal-warning" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
