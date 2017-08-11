@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Channel Managerment | Log in</title>
+  <title>Channel Management | Log in</title>
 
   <link rel="shortcut icon" href="images/kbank.ico"/>
   <!-- Tell the browser to be responsive to screen width -->
@@ -35,7 +35,7 @@
 <div class="login-box">
   <div class="login-logo">
     <img src="images/kasikorn_logo.png" class="user-image" alt="KBank Image" width="70px" height="70px"><br>
-    <a href="starter.php"><b>CI</b> Channel Managerment</a>
+    <a href="starter.php"><b>CI</b> Channel Management</a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">

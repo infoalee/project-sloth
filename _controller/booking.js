@@ -4,7 +4,8 @@ $(document).ready(function () {
 
         if ($('#inputCampCode').val() == '') {
 
-            alert("Please enter Camapign Code.");
+            //alert("Please enter Camapign Code.");
+            $('#myModal').modal('show')
 
         } else {
 

@@ -2074,6 +2074,7 @@ a:focus {
   padding: 5px 10px;
   margin-left: 90px;
 }
+
 .info-box-number {
   display: block;
   font-weight: bold;
@@ -2093,6 +2094,9 @@ a:focus {
 .info-box-more {
   display: block;
 }
+
+
+
 .progress-description {
   margin: 0;
 }

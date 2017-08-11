@@ -51,17 +51,11 @@ Class Dashboard {
             <div class='info-box-content'>
               <span class='info-box-text'>" . $this->label . "</span>
               <span class='info-box-number text-center'>". $this->notification ."</span>
-                <span class='info-box-btn' style='position: absolute;
-bottom: 15px;
-right: 15px;left: 105px;'>
-               <button type='button' class='btn btn-block btn-md btn-flat bg-teal'>". $this->detail ." &nbsp; <i class='fa fa-arrow-circle-right'></i> </button>
+
+            </div>
+                <span class='info-box-btn'>
+               <a href='#' class='btn btn-block btn-flat bg-teal'>". $this->detail ." &nbsp; <i class='fa fa-arrow-circle-right'></i> </a>
                </span>
-            </div>
-
-            <div class='info-box-footer'>
-               
-            </div>
-
             <!-- /.info-box-content -->
           </div>
           <!-- /.info-box -->
