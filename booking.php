@@ -2,33 +2,7 @@
     <link rel="stylesheet" href="plugins/datepicker/datepicker3.css">
     <!-- bootstrap datepicker -->
     <script src="plugins/datepicker/bootstrap-datepicker.js"></script>
-    <script>
-          $(function () {
-            //Date picker
-            $('#datepickerFrom').datepicker({
-                format: "dd-mm-yyyy",
-            //startDate: "today",
-            autoclose: true,
-            todayHighlight: true
-            });
-            $('#datepickerTo').datepicker({
-                format: "dd-mm-yyyy",
-            //startDate: "today",
-            autoclose: true,
-            todayHighlight: true
-            });
-            $('#datepickerContact').datepicker({
-                format: "dd-mm-yyyy",
-            startDate: "today",
-            autoclose: true,
-            todayHighlight: true
-            });
-            
-            $('#btnNext').click(function(){
-                $('.ajax-content').load('booking1.php');
-            });
-          });
-    </script>
+
 <!-- Horizontal Form -->
           <div class="box box-info">
             <div class="box-header with-border">
@@ -49,7 +23,7 @@
                                 </span>
                         </div>
                   </div>
-                  
+
                         <div class="col-sm-2 col-lg-1">
                           <label for="inputslType" class="control-label">Type :</label>
                         </div>

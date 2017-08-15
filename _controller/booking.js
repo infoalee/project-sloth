@@ -1,5 +1,28 @@
 $(document).ready(function () {
-   
+    //Date picker
+    $('#datepickerFrom').datepicker({
+        format: "dd-mm-yyyy",
+        //startDate: "today",
+        autoclose: true,
+        todayHighlight: true
+    });
+    $('#datepickerTo').datepicker({
+        format: "dd-mm-yyyy",
+        //startDate: "today",
+        autoclose: true,
+        todayHighlight: true
+    });
+    $('#datepickerContact').datepicker({
+        format: "dd-mm-yyyy",
+        startDate: "today",
+        autoclose: true,
+        todayHighlight: true
+    });
+
+    $('#btnNext').click(function () {
+        $('.ajax-content').load('booking1.php');
+    });
+    
     $('#inputCampCode').on("keypress", function (e) {
         if (e.keyCode == 13) {
             //alert("Enter pressed");
