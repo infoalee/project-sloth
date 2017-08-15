@@ -1,6 +1,13 @@
 $(document).ready(function () {
+   
+    $('#inputCampCode').on("keypress", function (e) {
+        if (e.keyCode == 13) {
+            //alert("Enter pressed");
+            $('#btnCampaignChk').click();
+        }
+    });
 
-    $("#btnCampaingChk").click(function () {
+    $("#btnCampaignChk").click(function () {
 
         if ($('#inputCampCode').val() == '') {
 

@@ -45,11 +45,11 @@
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Campaign Code" id="inputCampCode" maxlength="9"  required data-validation-required-message="Please enter to Search"  size="9">
                                 <span class="input-group-btn">
-                                <button type="button" id="btnCampaingChk" class="btn btn-info btn-flat">Check !</button>
+                                <button type="button" id="btnCampaignChk" class="btn btn-info btn-flat">Check !</button>
                                 </span>
                         </div>
                   </div>
-
+                  
                         <div class="col-sm-2 col-lg-1">
                           <label for="inputslType" class="control-label">Type :</label>
                         </div>
