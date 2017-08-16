@@ -144,9 +144,9 @@
                 </div>
 
                 <div class="form-group edm">
-                  <label for="inputslSender" class="col-sm-2 control-label">Sender Name</label>
+                  <label for="slSenderEmail" class="col-sm-2 control-label">Sender Name</label>
                   <div class="col-sm-10 col-lg-3">
-                    <select id="slSender" class="form-control selectpicker inline">
+                    <select id="slSenderEmail" class="form-control selectpicker inline">
                         <option>Please select</option>
                         <option value="K-Special">K-Special</option>
                         <option value="KBankCardDF">KBankCard</option>
@@ -171,9 +171,9 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="inputslSender" class="col-sm-2 control-label">Sender (Page Code)</label>
+                  <label for="slSenderKPLUS" class="col-sm-2 control-label">Sender (Page Code)</label>
                   <div class="col-sm-10 col-lg-3">
-                    <select id="slSender" class="form-control selectpicker inline">
+                    <select id="slSenderKPLUS" class="form-control selectpicker inline">
                         <option>Please select</option>
                         <option value="PA0014">PA0014 - My Promotion</option>
                         <option value="PA0015">PA0015 - K PLUS</option>
@@ -184,9 +184,9 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="inputslSender" class="col-sm-2 control-label">Feed Type</label>
+                  <label for="slSendTypeKPLUS" class="col-sm-2 control-label">Feed Type</label>
                   <div class="col-sm-10 col-lg-3">
-                    <select id="slSender" class="form-control selectpicker inline">
+                    <select id="slSendTypeKPLUS" class="form-control selectpicker inline">
                         <option>Please select</option>
                         <option value="TA07-1">TA07-1 : Feed แบบ 1 ปุ่ม (สีเขียว)</option>
                         <option value="TA07-2">TA07-2 : Feed แบบ 2 ปุ่ม (สีเขียวและสีแดง)</option>
@@ -196,9 +196,9 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="inputslSender" class="col-sm-2 control-label">URL Action</label>
+                  <label for="slSendTypeFuncKPLUS" class="col-sm-2 control-label">URL Action</label>
                   <div class="col-sm-10 col-lg-3">
-                    <select id="slSender" class="form-control selectpicker inline">
+                    <select id="slSendTypeFuncKPLUS" class="form-control selectpicker inline">
                         <option>Please select</option>
                         <option value="1">Register PromptPay</option>
                         <option value="2">Purchase Mutual Fund</option>
@@ -210,9 +210,9 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="inputslSender" class="col-sm-2 control-label">Language</label>
+                  <label for="slSendLangKPLUS" class="col-sm-2 control-label">Language</label>
                   <div class="col-sm-10 col-lg-3">
-                    <select id="slSender" class="form-control selectpicker inline">
+                    <select id="slSendLangKPLUS" class="form-control selectpicker inline">
                         <option value="TH">Thai</option>
                         <option value="TH/EN">Thai / English</option>
                         <option value="EN">English</option>
@@ -220,19 +220,9 @@
                   </div>
                 </div>
 
-                <div class="form-group kpkus">
-                    <label for="inputKPLUSMeassage1" class="col-sm-2 control-label">Message Thai</label>
-                    <div class="col-sm-8 col-md-6 col-lg-6 KPLUSMSG">
-                      <textarea row="3" class="form-control" id="inputKPLUSMeassage1" placeholder="Message Thai 1"></textarea>  
-                    </div>
+<script>
+                    
 
-                  <div class="col-sm-2 col-md-2 col-lg-1">
-                    <span id='btnAddKPLUS' class="btn btn-flat btn-sm btn-success"><i class="fa fa-plus" aria-hidden="true"></i> Add</span>
-                    <span id='btnDelKPLUS' class="btn btn-flat btn-sm btn-warning"><i class="fa fa-minus" aria-hidden="true"></i> Del</span>
-                  </div>
-                </div>
-                
-                <script>
 
                    var n = $( ".KPLUSMSG > textarea" ).length;
                     if (n > 1){
@@ -240,6 +230,20 @@
                     }else{
                         $("#btnDelKPLUS").hide();
                     }
+
+                    $( "#slSendLangKPLUS" ).change(function() {
+                      if ($(this).val() == 'TH' ) {
+                          $(".th").show();
+                          $(".en").hide();
+                      }else if ($(this).val() == 'TH/EN' ) { 
+                          $(".th").show();
+                          $(".en").show();
+                      }else if ($(this).val() == 'EN' ) { 
+                          $(".th").hide();
+                          $(".en").show();
+                      }
+                    });
+
 
                     $("#btnAddKPLUS")
                     .click(function() {
@@ -275,45 +279,57 @@
 
                 </script>
 
-                <div class="form-group kpkus">
-                  <label for="inputEdmPathAW" class="col-sm-2 control-label">Alert Thai</label>
+                <div class="form-group kpkus th">
+                    <label for="inputKPlusMeassageTH1" class="col-sm-2 control-label">Message Thai</label>
+                    <div class="col-sm-8 col-md-6 col-lg-6 KPLUSMSG">
+                      <textarea row="3" class="form-control" id="inputKPlusMeassageTH1" placeholder="Message Thai 1"></textarea>  
+                    </div>
+
+                  <div class="col-sm-2 col-md-2 col-lg-1">
+                    <span id='btnAddKPLUS' class="btn btn-flat btn-sm btn-success"><i class="fa fa-plus" aria-hidden="true"></i> Add</span>
+                    <span id='btnDelKPLUS' class="btn btn-flat btn-sm btn-warning"><i class="fa fa-minus" aria-hidden="true"></i> Del</span>
+                  </div>
+                </div>
+
+                <div class="form-group kpkus th">
+                  <label for="inputKPlusNotiTH1" class="col-sm-2 control-label">Alert Thai</label>
                   <div class="col-sm-10 col-lg-6">
-                    <input type="text" class="form-control" id="inputEdmPathAW" placeholder="Alert Thai 1">
+                    <input type="text" class="form-control" id="inputKPlusNotiTH1" placeholder="Alert Thai 1">
                   </div>
                 </div>
 
-                <div class="form-group">
-                  <label for="fileLeadUpload" class="col-sm-2 control-label">Image Thai</label>
+                <div class="form-group  kpkus th">
+                  <label for="fileKPlusImgTH1" class="col-sm-2 control-label">Image Thai</label>
                   <div class="col-sm-6 col-lg-4">
-                   <input type="file" class="form-control inline" id="fileLeadUpload" />
+                   <input type="file" class="form-control inline" id="fileKPlusImgTH1" />
                   </div>
                 </div>
 
-                <div class="form-group kpkus">
-                    <label for="inputKPLUSMeassage1" class="col-sm-2 control-label">Message English</label>
+                <div class="form-group kpkus en">
+                    <label for="inputKPlusMeassageEN1" class="col-sm-2 control-label">Message English</label>
                     <div class="col-sm-8 col-md-6 col-lg-6">
-                      <textarea row="3" class="form-control" id="inputKPLUSMeassage1" placeholder="Message English 1"></textarea>  
+                      <textarea row="3" class="form-control" id="inputKPlusMeassageEN1" placeholder="Message English 1"></textarea>  
                     </div>
                 </div>
 
-                <div class="form-group kpkus">
-                  <label for="inputEdmPathAW" class="col-sm-2 control-label">Alert English</label>
+                <div class="form-group kpkus en">
+                  <label for="inputKPlusNotiEN1" class="col-sm-2 control-label">Alert English</label>
                   <div class="col-sm-10 col-lg-6">
-                    <input type="text" class="form-control" id="inputEdmPathAW" placeholder="Alert English 1">
+                    <input type="text" class="form-control" id="inputKPlusNotiEN1" placeholder="Alert English 1">
                   </div>
                 </div>
 
-                <div class="form-group">
-                  <label for="fileLeadUpload" class="col-sm-2 control-label">Image English</label>
+                <div class="form-group kpkus en">
+                  <label for="fileKPlusImgEN1" class="col-sm-2 control-label">Image English</label>
                   <div class="col-sm-6 col-lg-4">
-                   <input type="file" class="form-control inline" id="fileLeadUpload" />
+                   <input type="file" class="form-control inline" id="fileKPlusImgEN1" />
                   </div>
                 </div>
       
                 <div class="form-group">
-                  <label for="fileLeadUpload" class="col-sm-2 control-label">Mobile To Test</label>
+                  <label for="fileMobileTest" class="col-sm-2 control-label">Mobile To Test</label>
                   <div class="col-sm-6 col-lg-4">
-                   <input type="file" class="form-control inline" id="fileLeadUpload" />
+                   <input type="file" class="form-control inline" id="fileMobileTest" />
                   </div>
                 </div>
 
