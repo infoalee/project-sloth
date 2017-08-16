@@ -81,8 +81,8 @@
                       </div>
 
                     <div class="col-sm-2 col-md-2 col-lg-1">
-                      <button id='btnAddSMS' class="form-control btn-sm btn-success"><i class="fa fa-plus" aria-hidden="true"></i> Add</Button>
-                      <button id='btnDelSMS' class="form-control btn-sm btn-warning"><i class="fa fa-minus" aria-hidden="true"></i> Del</Button>
+                      <span id='btnAddSMS' class="btn btn-sm btn-flat btn-success"><i class="fa fa-plus" aria-hidden="true"></i> Add</span>
+                      <span id='btnDelSMS' class="btn btn-sm btn-flat btn-warning"><i class="fa fa-minus" aria-hidden="true"></i> Del</span>
                     </div>
                   </div>
 
@@ -164,9 +164,9 @@
                 </div>
 
                 <div class="form-group edm">
-                  <label for="inputEdmPathAW" class="col-sm-2 control-label">Paht Artwork</label>
+                  <label for="inputEdmPathAW" class="col-sm-2 control-label">Path Artwork</label>
                   <div class="col-sm-10 col-lg-6">
-                    <input type="text" class="form-control" id="inputEdmPathAW" placeholder="Paht Artwork">
+                    <input type="text" class="form-control" id="inputEdmPathAW" placeholder="Path Artwork">
                   </div>
                 </div>
 
@@ -222,15 +222,58 @@
 
                 <div class="form-group kpkus">
                     <label for="inputKPLUSMeassage1" class="col-sm-2 control-label">Message Thai</label>
-                    <div class="col-sm-8 col-md-6 col-lg-6">
+                    <div class="col-sm-8 col-md-6 col-lg-6 KPLUSMSG">
                       <textarea row="3" class="form-control" id="inputKPLUSMeassage1" placeholder="Message Thai 1"></textarea>  
                     </div>
 
                   <div class="col-sm-2 col-md-2 col-lg-1">
-                    <button id='btnAddKPLUS' class="form-control btn-sm btn-success"><i class="fa fa-plus" aria-hidden="true"></i> Add</Button>
-                    <button id='btnDelKPLUS' class="form-control btn-sm btn-warning"><i class="fa fa-minus" aria-hidden="true"></i> Del</Button>
+                    <span id='btnAddKPLUS' class="btn btn-flat btn-sm btn-success"><i class="fa fa-plus" aria-hidden="true"></i> Add</span>
+                    <span id='btnDelKPLUS' class="btn btn-flat btn-sm btn-warning"><i class="fa fa-minus" aria-hidden="true"></i> Del</span>
                   </div>
                 </div>
+                
+                <script>
+
+                   var n = $( ".KPLUSMSG > textarea" ).length;
+                    if (n > 1){
+                        $("#btnAddKPLUS").show();
+                    }else{
+                        $("#btnDelKPLUS").hide();
+                    }
+
+                    $("#btnAddKPLUS")
+                    .click(function() {
+                        var n = $( ".KPLUSMSG > textarea" ).length + 1;
+                        if (n > 1 ){
+                            $("#btnDelKPLUS").show();
+                        }
+                        if (n < 10 ){
+                            $(".KPLUSMSG").append( $( "<textarea row='3' class='form-control sms" + n + "' id='inputSMSMeassage1' placeholder='Message Thai " + n + "'></textarea>" ) );
+                        }else{
+                            alert("limit KPLUS Message")
+                        }
+                        var n = $( ".KPLUSMSG > textarea" ).length;
+                        //alert( "There are " + n + " textareas." + "Click to add more.");
+                    });
+                    // Trigger the click to start
+                    //.trigger( "click" );
+
+                    $("#btnDelKPLUS")
+                    .click(function() {
+                        var n = $( ".KPLUSMSG > textarea" ).length;
+                        //if (n < 10 ){
+                            //alert($('textarea').length);
+                            $('.KPLUSMSG > textarea').remove( ".sms" + n);
+                        //}else{
+                        //    alert("limit SMS Message")
+                       // }
+                        if ($( ".KPLUSMSG > textarea" ).length < 2){
+                            $(this).hide();
+                        }
+                        //alert( "There are " + n + " textareas." + "Click to add more.");
+                    });
+
+                </script>
 
                 <div class="form-group kpkus">
                   <label for="inputEdmPathAW" class="col-sm-2 control-label">Alert Thai</label>
