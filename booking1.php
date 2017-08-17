@@ -211,19 +211,23 @@
 
                 <div class="form-group">
                   <label for="slSendLangKPLUS" class="col-sm-2 control-label">Language</label>
-                  <div class="col-sm-10 col-lg-3">
+                  <div class="col-sm-5 col-lg-3">
                     <select id="slSendLangKPLUS" class="form-control selectpicker inline">
                         <option value="TH">Thai</option>
                         <option value="TH/EN">Thai / English</option>
                         <option value="EN">English</option>
                     </select>
                   </div>
+
+                  <div class="col-sm-5 col-lg-2">
+                    <div id='btnAddKPLUS' class="btn btn-flat btn-sm btn-success"><i class="fa fa-plus" aria-hidden="true"></i> Add</div>
+                    <div id='btnDelKPLUS' class="btn btn-flat btn-sm btn-warning"><i class="fa fa-minus" aria-hidden="true"></i> Del</div>
+                  </div>
+
                 </div>
 
 <script>
-                    
-
-
+        
                    var n = $( ".KPLUSMSG > textarea" ).length;
                     if (n > 1){
                         $("#btnAddKPLUS").show();
@@ -231,100 +235,48 @@
                         $("#btnDelKPLUS").hide();
                     }
 
+                    $(".PanelkplusTh").show();
+                    $(".PanelkplusEn").hide();
+
                     $( "#slSendLangKPLUS" ).change(function() {
                       if ($(this).val() == 'TH' ) {
-                          $(".th").show();
-                          $(".en").hide();
+                          $(".PanelkplusTh").show();
+                          $(".PanelkplusEn").hide();
                       }else if ($(this).val() == 'TH/EN' ) { 
-                          $(".th").show();
-                          $(".en").show();
+                          $(".PanelkplusTh").show();
+                          $(".PanelkplusEn").show();
                       }else if ($(this).val() == 'EN' ) { 
-                          $(".th").hide();
-                          $(".en").show();
+                          $(".PanelkplusTh").hide();
+                          $(".PanelkplusEn").show();
                       }
                     });
 
 
                     $("#btnAddKPLUS")
                     .click(function() {
-                        var n = $( ".KPLUSMSG > textarea" ).length + 1;
-                        if (n > 1 ){
-                            $("#btnDelKPLUS").show();
-                        }
-                        if (n < 10 ){
-                            $(".KPLUSMSG").append( $( "<textarea row='3' class='form-control sms" + n + "' id='inputSMSMeassage1' placeholder='Message Thai " + n + "'></textarea>" ) );
-                        }else{
-                            alert("limit KPLUS Message")
-                        }
-                        var n = $( ".KPLUSMSG > textarea" ).length;
-                        //alert( "There are " + n + " textareas." + "Click to add more.");
+                      $("#myModalAddKPlus").modal('show')
                     });
                     // Trigger the click to start
                     //.trigger( "click" );
 
                     $("#btnDelKPLUS")
                     .click(function() {
-                        var n = $( ".KPLUSMSG > textarea" ).length;
+                        var n = $( ".PanelkplusThAdd > .kplusTh" ).length;
                         //if (n < 10 ){
                             //alert($('textarea').length);
-                            $('.KPLUSMSG > textarea').remove( ".sms" + n);
+                            $(".PanelkplusThAdd > .kplusTh").remove();
                         //}else{
                         //    alert("limit SMS Message")
                        // }
-                        if ($( ".KPLUSMSG > textarea" ).length < 2){
+                        if ($(".PanelkplusThAdd > .kplusTh" ).length < 2){
                             $(this).hide();
                         }
                         //alert( "There are " + n + " textareas." + "Click to add more.");
                     });
 
-                </script>
-
-                <div class="form-group kpkus th">
-                    <label for="inputKPlusMeassageTH1" class="col-sm-2 control-label">Message Thai</label>
-                    <div class="col-sm-8 col-md-6 col-lg-6 KPLUSMSG">
-                      <textarea row="3" class="form-control" id="inputKPlusMeassageTH1" placeholder="Message Thai 1"></textarea>  
-                    </div>
-
-                  <div class="col-sm-2 col-md-2 col-lg-1">
-                    <span id='btnAddKPLUS' class="btn btn-flat btn-sm btn-success"><i class="fa fa-plus" aria-hidden="true"></i> Add</span>
-                    <span id='btnDelKPLUS' class="btn btn-flat btn-sm btn-warning"><i class="fa fa-minus" aria-hidden="true"></i> Del</span>
-                  </div>
-                </div>
-
-                <div class="form-group kpkus th">
-                  <label for="inputKPlusNotiTH1" class="col-sm-2 control-label">Alert Thai</label>
-                  <div class="col-sm-10 col-lg-6">
-                    <input type="text" class="form-control" id="inputKPlusNotiTH1" placeholder="Alert Thai 1">
-                  </div>
-                </div>
-
-                <div class="form-group  kpkus th">
-                  <label for="fileKPlusImgTH1" class="col-sm-2 control-label">Image Thai</label>
-                  <div class="col-sm-6 col-lg-4">
-                   <input type="file" class="form-control inline" id="fileKPlusImgTH1" />
-                  </div>
-                </div>
-
-                <div class="form-group kpkus en">
-                    <label for="inputKPlusMeassageEN1" class="col-sm-2 control-label">Message English</label>
-                    <div class="col-sm-8 col-md-6 col-lg-6">
-                      <textarea row="3" class="form-control" id="inputKPlusMeassageEN1" placeholder="Message English 1"></textarea>  
-                    </div>
-                </div>
-
-                <div class="form-group kpkus en">
-                  <label for="inputKPlusNotiEN1" class="col-sm-2 control-label">Alert English</label>
-                  <div class="col-sm-10 col-lg-6">
-                    <input type="text" class="form-control" id="inputKPlusNotiEN1" placeholder="Alert English 1">
-                  </div>
-                </div>
-
-                <div class="form-group kpkus en">
-                  <label for="fileKPlusImgEN1" class="col-sm-2 control-label">Image English</label>
-                  <div class="col-sm-6 col-lg-4">
-                   <input type="file" class="form-control inline" id="fileKPlusImgEN1" />
-                  </div>
-                </div>
+</script>
+<div class="PanelkplusThAdd">
+</div>
       
                 <div class="form-group">
                   <label for="fileMobileTest" class="col-sm-2 control-label">Mobile To Test</label>
@@ -341,9 +293,9 @@
                 </div>
 
                 <div class="form-group kpkus">
-                    <label for="inputKPLUSMeassage1" class="col-sm-2 control-label">Remark</label>
+                    <label for="inputRemark" class="col-sm-2 control-label">Remark</label>
                     <div class="col-sm-8 col-md-6 col-lg-6">
-                      <textarea row="3" class="form-control" id="inputKPLUSMeassage1" placeholder="Remark"></textarea>  
+                      <textarea row="3" class="form-control" id="inputRemark" placeholder="Remark"></textarea>  
                     </div>
                 </div>
 
@@ -357,12 +309,91 @@
             </form>
           </div>
           <!-- /.box -->
+<style>
+.modal-header-success {
+    color:#fff;
+    padding:9px 15px;
+    border-bottom:1px solid #eee;
+    background-color: #5cb85c;
+    /*-webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+     border-top-left-radius: 5px;
+     border-top-right-radius: 5px;*/
+}
+</style>
+<!-- Modal -->
+<div class="modal fade" id="myModalAddKPlus" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header modal-header-success">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Add Detail K PLUS</h4>
+      </div>
+      <div class="modal-body">
+        
+        <!-- KPlus Message -->
+        <div class="form-horizontal">
+        <!-- KPlus Thai Message -->
+        <div class="PanelkplusTh">
+        <h3>K PLUS Thai</h3>
+                <div class="form-group kplusTh">
+                    <label for="inputKPlusMeassageTH1" class="col-sm-3 control-label">Message Thai</label>
+                    <div class="col-sm-8 col-md-6 col-lg-9">
+                      <textarea row="3" class="form-control" id="inputKPlusMeassageTH1" placeholder="Message Thai 1"></textarea>  
+                    </div>
+                </div>
 
-<script type="text/javascript">
-    $(function(){
+                <div class="form-group kplusTh">
+                  <label for="inputKPlusNotiTH1" class="col-sm-3 control-label">Alert Thai</label>
+                  <div class="col-sm-8 col-md-6 col-lg-9">
+                    <input type="text" class="form-control" id="inputKPlusNotiTH1" placeholder="Alert Thai 1">
+                  </div>
+                </div>
 
-            //$(".sms").show();
-            //$(".edm").hide();
+                <div class="form-group kplusTh">
+                  <label for="fileKPlusImgTH1" class="col-sm-3 control-label">Image Thai</label>
+                  <div class="col-sm-8 col-md-6 col-lg-6">
+                   <input type="file" class="form-control inline" id="fileKPlusImgTH1" />
+                  </div>
+                </div>
+        </div>
+        <!-- /. KPlus Thai Message -->
+       
+        <!-- KPlus English Message -->
+        <div class="PanelkplusEn">
+         <h3>K PLUS English</h3>
+                <div class="form-group kplusEn">
+                    <label for="inputKPlusMeassageEN1" class="col-sm-3 control-label">Message English</label>
+                    <div class="col-sm-8 col-md-6 col-lg-9">
+                      <textarea row="3" class="form-control" id="inputKPlusMeassageEN1" placeholder="Message English 1"></textarea>  
+                    </div>
+                </div>
 
-    });
-</script>
+                <div class="form-group kplusEn">
+                  <label for="inputKPlusNotiEN1" class="col-sm-3 control-label">Alert English</label>
+                  <div class="col-sm-8 col-md-6 col-lg-9">
+                    <input type="text" class="form-control" id="inputKPlusNotiEN1" placeholder="Alert English 1">
+                  </div>
+                </div>
+
+                <div class="form-group kplusEn">
+                  <label for="fileKPlusImgEN1" class="col-sm-3 control-label">Image English</label>
+                  <div class="col-sm-8 col-md-6 col-lg-6">
+                   <input type="file" class="form-control inline" id="fileKPlusImgEN1" />
+                  </div>
+                </div>
+        </div>
+        <!-- /. KPlus English Message -->
+        </div>
+        <!-- /. KPlus Message -->
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success" data-dismiss="modal">Add</button>
+      </div>
+    </div>
+  </div>
+</div>
