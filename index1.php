@@ -299,6 +299,7 @@ desired effect
         <small>Optional description</small>
         <a id="test1" href="#" class="testA">booking1</a>
         <a id="test2" href="#" class="testA">booking2</a>
+        <a id="test3" href="#" class="testA">Calendar</a>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
@@ -310,7 +311,7 @@ desired effect
     <section class="content">
 
       <!-- Your Page Content Here -->
-      <div class="row">
+      <div class="row dashboard">
       <?
         include "./_view/dashboard.php"
       ?>
@@ -502,10 +503,19 @@ desired effect
     });
 
     $('#test1').click(function(){
+      $('.dashboard').show();
+      $('.content-header').show();
       $('.ajax-content').load('booking.php');
     });
     $('#test2').click(function(){
+      $('.dashboard').show();
+      $('.content-header').show();
       $('.ajax-content').load('booking1.php');
+    });
+    $('#test3').click(function(){
+      $('.dashboard').hide();
+      $('.content-header').hide();
+      $('.ajax-content').load('_view/calendar.php');
     });
 </script>
 
